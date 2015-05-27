@@ -1,0 +1,179 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+ 
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+ 
+\raggedright
+\pagenumbering{gobble}
+ 
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+ 
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+ 
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+ 
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+ 
+\newcommand{\contact}[6]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}
+			{#3} \\ 
+			{#5}    
+			{#6} \\ 
+            {#4} \\ 
+		\end{center}
+	\end{changemargin}
+}
+ 
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }
+	{\end{changemargin}
+}
+ 
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\
+	#4\\
+}
+ 
+% END RESUME DEFINITIONS
+ 
+\begin{document}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{xxx xxx}{29B Pasaje Hermanos Manchego,}{La Paz, Bolivia}{http://mpiannucci.com}{xxxxx@live.com}{(591) 704-17002}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Experience}
+ 
+\begin{body}
+	\vspace{14pt}
+	\smallskip
+ 
+	\textbf{Software Engineer}, Navatek Ltd. \textit{South Kingstown, RI} \hfill \emph{December 2012 -  Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Lead development of the company's main Graphical User Interface application, written in C++ using the Qt platform. This includes creating the code structure from scratch and abstracting low level capabilities to enforce consistent programming style.
+		\item Set up and encourage the use of unit testing in C++ libraries using Boost and QTest for all of the company's libraries
+        \item Port all of the company's projects to be cross platform using CMake. Previously, the programs were limited to use by Windows customers
+		\item Manage multiple git repositories with between 10 and 20 contributors 
+		\item Update C++ geometry processing software to use object oriented design patterns
+		\item Set up and maintain the Windows Active Directory Server for the Rhode Island office (About 30 users)
+	\end{itemize}
+ 
+	\textbf{Software Developer, Co-Captain}, URI Autonomous Surface Vehicle Team \hfill \emph{December 2012 -  August 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Leader and member of the development team tasked with creating a completely autonomous boat that navigates a buoy course and performs various tasks, such as navigating a buoy course
+		\item Developed software outlining machine behavior that utilized real-time sensor data
+		\item Responsible for hardware abstraction through Python and C++ programming
+		\item Competed at the 2013 and 2014 AUVSI RoboBoat competition in Virginia Beach
+	\end{itemize}
+ 
+	\textbf{Marine Research Assistant}, GSO Equipment Development Lab, \textit{URI} \hfill \emph{March 2013 - December 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Assisted in a study conducted by the University of Rhode Island College of Environment and Life Sciences and Rhode Island Department of Energy to measure the acoustic impact of wind turbines through signal analysis
+	\end{itemize}
+\end{body}
+ 
+\smallskip
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+ 
+\begin{body}
+	\vspace{14pt}
+	\textbf{University of Rhode Island}, \textit{Kingston, RI} \hfill \emph{May 2014} \\
+	\emph{Ocean Engineering major with a focus in software development, and robotics}
+\end{body}
+ 
+\smallskip
+ 
+% \newpage{} % uncomment this line if you want to force a new page
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projects
+\header{Projects}
+ 
+\begin{body}
+	\vspace{14pt}
+	\smallskip
+	\textbf{Principal Developer}, HackWinds Mobile App \hfill \emph{Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Created a cross-platform native mobile application to view and monitor the surfing conditions in Southern Rhode Island
+		\item Designed user interfaces that adhere to respective design guideline (iOS and Android)
+		\item Used object oriented software design to create an efficient and modular code base
+		\item Available from both Google Play and the iOS App Store
+	\end{itemize}
+ 
+	\textbf{Developer}, Embedded Wireless Bridge Sensor Development, \textit{URI} \hfill \emph{September 2013 - May 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Team member developing a wireless sensor for bridge health monitoring, specifically the Newport Bridge and the Rhode Island Bridge and Turnpike Authority
+		\item Charged with developing embedded software and cooridinating time synchronization between multiple network connected sensors
+	\end{itemize}
+ 
+	\textbf{Principal}, Surf for a Wish Surfing Competition \textit{Narragansett, RI} \hfill \emph{April 2010}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Created, organized and ran a surfing competition at Narragansett Town Beach to benefit the Make-A-Wish Foundation
+		\item Raised over \$1,500 for the Make-A-Wish Foundation of Rhode Island
+	\end{itemize}
+\end{body}
+ 
+\smallskip
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Relevant Technical Skills}
+ 
+\begin{body}
+	\vspace{14pt}
+	\emph{\textbf{Programming:}}{} C++, Python, Objective C, Java, Go, Matlab, Bash, HTML, CSS, SQL  \\
+	\medskip
+	\emph{\textbf{Platforms:}}{} Linux, iOS, Android, QT, Windows, OSX, Web \\
+	\medskip
+	\emph{\textbf{Programs:}}{} Git, Matlab, Rhino, Microsoft Office, Adobe Creative Suite \\
+\end{body}
+ 
+\smallskip
+ 
+\end{document}
